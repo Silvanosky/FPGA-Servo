@@ -1,5 +1,5 @@
 Flow report for FPGA-Servo
-Sat Jun 08 20:02:33 2019
+Sat Jun 08 23:20:13 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,29 +37,28 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Jun 08 20:02:13 2019       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; FPGA-Servo                                  ;
-; Top-level Entity Name           ; DE0_CV_golden_top                           ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CEBA4F23C7                                 ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1 / 18,480 ( < 1 % )                        ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 206 / 224 ( 92 % )                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 4 ( 0 % )                               ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Sat Jun 08 23:20:08 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; FPGA-Servo                                  ;
+; Top-level Entity Name              ; main                                        ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C6GES                            ;
+; Timing Models                      ; Preliminary                                 ;
+; Total logic elements               ; 109 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 108 / 49,760 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 28 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 28                                          ;
+; Total pins                         ; 45 / 360 ( 13 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,30 +66,38 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/08/2019 20:00:39 ;
+; Start date & time ; 06/08/2019 23:19:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FPGA-Servo          ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                              ;
-+-------------------------------------+----------------------------------------+---------------+-------------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name       ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 93328253370363.156001683801240         ; --            ; --                ; --         ;
-; FITTER_EFFORT                       ; Standard Fit                           ; Auto Fit      ; --                ; --         ;
-; OPTIMIZATION_TECHNIQUE              ; Speed                                  ; Balanced      ; --                ; --         ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --                ; --         ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --                ; --         ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --                ; --         ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --                ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE0_CV_golden_top ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; DE0_CV_golden_top ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; DE0_CV_golden_top ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --                ; --         ;
-; TOP_LEVEL_ENTITY                    ; DE0_CV_golden_top                      ; FPGA-Servo    ; --                ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------------+------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                         ;
++--------------------------------------+----------------------------------------+---------------+-------------+------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id ;
++--------------------------------------+----------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID                ; 93328253370363.156002877107784         ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --         ;
+; MUX_RESTRUCTURE                      ; Off                                    ; Auto          ; --          ; --         ;
+; OPTIMIZATION_MODE                    ; Aggressive Performance                 ; Balanced      ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                             ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                             ; --            ; --          ; --         ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; main        ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; main        ; Top        ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; main        ; Top        ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC       ; On                                     ; Off           ; --          ; --         ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING ; On                                     ; Off           ; --          ; --         ;
+; PLACEMENT_EFFORT_MULTIPLIER          ; 4.0                                    ; 1.0           ; --          ; --         ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --         ;
+; ROUTER_TIMING_OPTIMIZATION_LEVEL     ; MAXIMUM                                ; Normal        ; --          ; --         ;
+; TOP_LEVEL_ENTITY                     ; main                                   ; FPGA-Servo    ; --          ; --         ;
++--------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -98,11 +105,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:26     ; 1.0                     ; 4876 MB             ; 00:00:44                           ;
-; Fitter               ; 00:00:52     ; 1.0                     ; 5967 MB             ; 00:00:51                           ;
-; Assembler            ; 00:00:10     ; 1.0                     ; 4833 MB             ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:18     ; 1.0                     ; 5043 MB             ; 00:00:13                           ;
-; Total                ; 00:01:46     ; --                      ; --                  ; 00:01:56                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4872 MB             ; 00:00:35                           ;
+; Fitter               ; 00:00:14     ; 1.0                     ; 5391 MB             ; 00:00:18                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4701 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4815 MB             ; 00:00:03                           ;
+; Total                ; 00:00:37     ; --                      ; --                  ; 00:01:00                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

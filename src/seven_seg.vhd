@@ -38,6 +38,18 @@ begin
 		hex <= "0000000";
     when 9 =>
 		hex <= "0000100";
+    when 10 =>
+		hex <= "0001000";
+    when 11 =>
+		hex <= "0000000";
+    when 12 =>
+		hex <= "0110001";
+    when 13 =>
+		hex <= "0000001";
+    when 14 =>
+		hex <= "0110000";
+    when 15 =>
+		hex <= "0111000";
 	  when others =>
 		hex <= "XXXXXXX";
   end case;

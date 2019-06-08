@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="d0492ac084f6252c6790"/>
+    <hash md5_digest_80b="87f01c0f920e10cff47b"/>
   </project>
   <file_info>
-    <file device="5CEBA4F23C7" path="FPGA-Servo.sof" usercode="0xFFFFFFFF"/>
+    <file device="10M50DAF484C6GES" path="FPGA-Servo.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>
