@@ -10,7 +10,7 @@ entity UART_Tx is
   port (
     clk         : in  std_logic; -- The clock
 	 rst			 : in  std_logic; -- The reset signal
-	 Tx_Valid	 : in  std_logic; -- Is tx sendable
+	Tx_Valid	 : in  std_logic; -- Is tx sendable
     Tx_Byte     : in  std_logic_vector(7 downto 0); -- The Tx byte to send
     
 	Tx_Active : out std_logic;
@@ -45,7 +45,7 @@ begin
         when Idle =>
           Tx_Active <= '0';
           Tx_Serial <= '1';         -- Drive Line High for Idle
-          Done   <= '0';
+          Done <= '0';
           clk_Count <= 0;
           index <= 0;
  

@@ -3,75 +3,75 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -3.009
-TNS   : -45.950
+Slack : -3.342
+TNS   : -59.038
 
 Type  : Slow 1200mV 85C Model Setup 'UART_Rx:UART_RX|valid'
-Slack : -1.176
-TNS   : -9.357
+Slack : -0.941
+TNS   : -7.148
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.330
+Slack : 0.348
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'UART_Rx:UART_RX|valid'
-Slack : 0.943
+Slack : 0.382
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -37.216
+TNS   : -42.284
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_Rx:UART_RX|valid'
-Slack : 0.395
+Slack : 0.382
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -2.612
-TNS   : -39.433
+Slack : -3.055
+TNS   : -51.907
 
 Type  : Slow 1200mV 0C Model Setup 'UART_Rx:UART_RX|valid'
-Slack : -1.088
-TNS   : -8.657
+Slack : -0.894
+TNS   : -6.725
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.299
+Slack : 0.311
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'UART_Rx:UART_RX|valid'
-Slack : 0.964
+Slack : 0.459
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -37.216
+TNS   : -42.284
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_Rx:UART_RX|valid'
-Slack : 0.441
+Slack : 0.466
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.981
-TNS   : -8.459
+Slack : -0.916
+TNS   : -9.516
 
 Type  : Fast 1200mV 0C Model Setup 'UART_Rx:UART_RX|valid'
-Slack : -0.298
-TNS   : -2.360
+Slack : -0.031
+TNS   : -0.189
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.152
+Slack : 0.153
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'UART_Rx:UART_RX|valid'
-Slack : 0.663
+Slack : 0.333
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -31.760
+TNS   : -31.759
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_Rx:UART_RX|valid'
-Slack : 0.396
+Slack : 0.338
 TNS   : 0.000
 
 ------------------------------------------------------------

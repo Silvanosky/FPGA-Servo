@@ -34,7 +34,6 @@ begin
   rst <= not KEY(0);
   clk <= CLOCK_50;
   inserial <= GPIO(0);
-  LEDR(0) <= GPIO(0);
   LEDR(1) <= outserial;
   GPIO(1) <= outserial;
 
@@ -45,13 +44,13 @@ begin
       baudrate => 115200
     )
     port map (
-      clk       => clk,
-      rst 		 	=> rst,
+      clk => clk,
+      rst => rst,
       Tx_Valid  => r_TX_V,
       Tx_Byte   => r_TX_BYTE,
 
       Tx_Active => open,
-      Tx_Serial => inserial,
+      Tx_Serial => outserial,
       Tx_Done   => w_TX_DONE
     );
 
@@ -61,9 +60,9 @@ begin
     	baudrate => 115200
     )
     port map (
-    	Clk       => clk,
-    	rst       => rst,
-      RX        => outserial,
+      clk       => clk,
+      rst       => rst,
+      RX        => inserial,
       IsData    => w_RX_V,
       Data_Byte => w_RX_BYTE
     );

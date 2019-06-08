@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA-Servo
-Sat Jun 08 23:19:48 2019
+Sat Jun 08 23:43:18 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -20,15 +20,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  12. Removed Registers Triggering Further Register Optimizations
  13. General Register Statistics
  14. Inverted Register Statistics
- 15. Physical Synthesis Netlist Optimizations
- 16. Multiplexer Restructuring Statistics (No Restructuring Performed)
- 17. Parameter Settings for User Entity Instance: UART_Tx:UART_TX
- 18. Parameter Settings for User Entity Instance: UART_Rx:UART_RX
- 19. Port Connectivity Checks: "UART_Rx:UART_RX"
- 20. Port Connectivity Checks: "UART_Tx:UART_TX"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 15. Multiplexer Restructuring Statistics (No Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: UART_Tx:UART_TX
+ 17. Parameter Settings for User Entity Instance: UART_Rx:UART_RX
+ 18. Port Connectivity Checks: "UART_Rx:UART_RX"
+ 19. Port Connectivity Checks: "UART_Tx:UART_TX"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -54,7 +53,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jun 08 23:19:48 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 08 23:43:18 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FPGA-Servo                                  ;
 ; Top-level Entity Name              ; main                                        ;
@@ -78,7 +77,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; 10M50DAF484C6GES   ;                    ;
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
 ; Top-level entity name                                            ; main               ; FPGA-Servo         ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Restructure Multiplexers                                         ; Off                ; Auto               ;
@@ -164,7 +163,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -176,16 +175,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                        ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
-; src/main.vhd                     ; yes             ; User VHDL File  ; C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd      ;         ;
-; src/uart_tx.vhd                  ; yes             ; User VHDL File  ; C:/Users/coren/Documents/GitHub/FPGA-Servo/src/uart_tx.vhd   ;         ;
-; src/uart_rx.vhd                  ; yes             ; User VHDL File  ; C:/Users/coren/Documents/GitHub/FPGA-Servo/src/uart_rx.vhd   ;         ;
-; src/seven_seg.vhd                ; yes             ; User VHDL File  ; C:/Users/coren/Documents/GitHub/FPGA-Servo/src/seven_seg.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+; src/main.vhd                     ; yes             ; User VHDL File  ; C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd      ;         ;
+; src/uart_tx.vhd                  ; yes             ; User VHDL File  ; C:/Users/vm/Desktop/FPGA-Servo/src/uart_tx.vhd   ;         ;
+; src/uart_rx.vhd                  ; yes             ; User VHDL File  ; C:/Users/vm/Desktop/FPGA-Servo/src/uart_rx.vhd   ;         ;
+; src/seven_seg.vhd                ; yes             ; User VHDL File  ; C:/Users/vm/Desktop/FPGA-Servo/src/seven_seg.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -197,8 +196,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Total combinational functions               ; 106            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 50             ;
-;     -- 3 input functions                    ; 24             ;
+;     -- 4 input functions                    ; 48             ;
+;     -- 3 input functions                    ; 26             ;
 ;     -- <=2 input functions                  ; 32             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
@@ -215,8 +214,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 28             ;
-; Total fan-out                               ; 472            ;
-; Average fan-out                             ; 2.09           ;
+; Total fan-out                               ; 470            ;
+; Average fan-out                             ; 2.08           ;
 +---------------------------------------------+----------------+
 
 
@@ -334,26 +333,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------+
-; Physical Synthesis Netlist Optimizations                                  ;
-+------------------------------------------+----------+---------------------+
-; Node                                     ; Action   ; Reason              ;
-+------------------------------------------+----------+---------------------+
-; Seven_seg:s0|Segout[7]~0                 ; Deleted  ; Timing optimization ;
-; Seven_seg:s0|Segout[7]~0_wirecell        ; Modified ; Timing optimization ;
-; Seven_seg:s1|Segout[7]~0                 ; Deleted  ; Timing optimization ;
-; Seven_seg:s1|Segout[7]~0_wirecell        ; Modified ; Timing optimization ;
-; UART_Rx:UART_RX|Add0~1                   ; Modified ; Timing optimization ;
-; UART_Rx:UART_RX|Selector2~0              ; Deleted  ; Timing optimization ;
-; UART_Rx:UART_RX|Selector2~1              ; Modified ; Timing optimization ;
-; UART_Rx:UART_RX|Selector2~1_RESYN0_BDD1  ; Created  ; Timing optimization ;
-; UART_Rx:UART_RX|Selector8~0              ; Deleted  ; Timing optimization ;
-; UART_Rx:UART_RX|Selector8~1              ; Modified ; Timing optimization ;
-; UART_Rx:UART_RX|Selector13~0             ; Modified ; Timing optimization ;
-; UART_Rx:UART_RX|Selector13~0_RESYN2_BDD3 ; Created  ; Timing optimization ;
-+------------------------------------------+----------+---------------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Restructuring Statistics (No Restructuring Performed)                                                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
@@ -424,18 +403,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 13                          ;
 ;     plain             ; 8                           ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 107                         ;
+; cycloneiii_lcell_comb ; 109                         ;
 ;     arith             ; 8                           ;
 ;         2 data inputs ; 8                           ;
-;     normal            ; 99                          ;
+;     normal            ; 101                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
 ;         2 data inputs ; 23                          ;
-;         3 data inputs ; 24                          ;
-;         4 data inputs ; 50                          ;
+;         3 data inputs ; 26                          ;
+;         4 data inputs ; 48                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.92                        ;
+; Average LUT depth     ; 3.02                        ;
 +-----------------------+-----------------------------+
 
 
@@ -444,7 +423,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -454,75 +433,75 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Jun 08 23:19:30 2019
+    Info: Processing started: Sat Jun 08 23:42:57 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA-Servo -c FPGA-Servo
 Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
     Info (16304): Mode behavior is affected by advanced setting Fitter Effort (default for this mode is Standard Fit)
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file src/main.vhd
-    Info (12022): Found design unit 1: main-rtl File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 19
-    Info (12023): Found entity 1: main File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 5
+    Info (12022): Found design unit 1: main-rtl File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 19
+    Info (12023): Found entity 1: main File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file src/uart_tx.vhd
-    Info (12022): Found design unit 1: UART_Tx-rtl File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/uart_tx.vhd Line: 23
-    Info (12023): Found entity 1: UART_Tx File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/uart_tx.vhd Line: 5
+    Info (12022): Found design unit 1: UART_Tx-rtl File: C:/Users/vm/Desktop/FPGA-Servo/src/uart_tx.vhd Line: 23
+    Info (12023): Found entity 1: UART_Tx File: C:/Users/vm/Desktop/FPGA-Servo/src/uart_tx.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file src/uart_rx.vhd
-    Info (12022): Found design unit 1: UART_Rx-rtl File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/uart_rx.vhd Line: 19
-    Info (12023): Found entity 1: UART_Rx File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/uart_rx.vhd Line: 5
+    Info (12022): Found design unit 1: UART_Rx-rtl File: C:/Users/vm/Desktop/FPGA-Servo/src/uart_rx.vhd Line: 19
+    Info (12023): Found entity 1: UART_Rx File: C:/Users/vm/Desktop/FPGA-Servo/src/uart_rx.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file src/seven_seg.vhd
-    Info (12022): Found design unit 1: Seven_seg-rtl File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/seven_seg.vhd Line: 12
-    Info (12023): Found entity 1: Seven_seg File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/seven_seg.vhd Line: 6
+    Info (12022): Found design unit 1: Seven_seg-rtl File: C:/Users/vm/Desktop/FPGA-Servo/src/seven_seg.vhd Line: 12
+    Info (12023): Found entity 1: Seven_seg File: C:/Users/vm/Desktop/FPGA-Servo/src/seven_seg.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file src/clock.vhd
-    Info (12022): Found design unit 1: Clock-rtl File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/clock.vhd Line: 17
-    Info (12023): Found entity 1: Clock File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/clock.vhd Line: 5
+    Info (12022): Found design unit 1: Clock-rtl File: C:/Users/vm/Desktop/FPGA-Servo/src/clock.vhd Line: 17
+    Info (12023): Found entity 1: Clock File: C:/Users/vm/Desktop/FPGA-Servo/src/clock.vhd Line: 5
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at main.vhd(13): used implicit default value for signal "HEX2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at main.vhd(14): used implicit default value for signal "HEX3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 14
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(21): object "inserial" assigned a value but never read File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 21
-Warning (10540): VHDL Signal Declaration warning at main.vhd(21): used explicit default value for signal "outserial" because signal was never assigned a value File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 21
-Warning (10036): Verilog HDL or VHDL warning at main.vhd(27): object "w_TX_DONE" assigned a value but never read File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at main.vhd(76): signal "w_RX_BYTE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 76
-Warning (10631): VHDL Process Statement warning at main.vhd(74): inferring latch(es) for signal or variable "data", which holds its previous value in one or more paths through the process File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 74
-Info (10041): Inferred latch for "data[0]" at main.vhd(74) File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 74
-Info (10041): Inferred latch for "data[1]" at main.vhd(74) File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 74
-Info (10041): Inferred latch for "data[2]" at main.vhd(74) File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 74
-Info (10041): Inferred latch for "data[3]" at main.vhd(74) File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 74
-Info (10041): Inferred latch for "data[4]" at main.vhd(74) File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 74
-Info (10041): Inferred latch for "data[5]" at main.vhd(74) File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 74
-Info (10041): Inferred latch for "data[6]" at main.vhd(74) File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 74
-Info (10041): Inferred latch for "data[7]" at main.vhd(74) File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 74
-Info (12128): Elaborating entity "UART_Tx" for hierarchy "UART_Tx:UART_TX" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 42
-Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx:UART_RX" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 58
-Info (12128): Elaborating entity "Seven_seg" for hierarchy "Seven_seg:s0" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 71
-Warning (10492): VHDL Process Statement warning at seven_seg.vhd(57): signal "hex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/seven_seg.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at seven_seg.vhd(59): signal "hex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/seven_seg.vhd Line: 59
+Warning (10541): VHDL Signal Declaration warning at main.vhd(13): used implicit default value for signal "HEX2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 13
+Warning (10541): VHDL Signal Declaration warning at main.vhd(14): used implicit default value for signal "HEX3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 14
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(21): object "inserial" assigned a value but never read File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 21
+Warning (10540): VHDL Signal Declaration warning at main.vhd(21): used explicit default value for signal "outserial" because signal was never assigned a value File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at main.vhd(27): object "w_TX_DONE" assigned a value but never read File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at main.vhd(76): signal "w_RX_BYTE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 76
+Warning (10631): VHDL Process Statement warning at main.vhd(74): inferring latch(es) for signal or variable "data", which holds its previous value in one or more paths through the process File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 74
+Info (10041): Inferred latch for "data[0]" at main.vhd(74) File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 74
+Info (10041): Inferred latch for "data[1]" at main.vhd(74) File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 74
+Info (10041): Inferred latch for "data[2]" at main.vhd(74) File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 74
+Info (10041): Inferred latch for "data[3]" at main.vhd(74) File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 74
+Info (10041): Inferred latch for "data[4]" at main.vhd(74) File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 74
+Info (10041): Inferred latch for "data[5]" at main.vhd(74) File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 74
+Info (10041): Inferred latch for "data[6]" at main.vhd(74) File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 74
+Info (10041): Inferred latch for "data[7]" at main.vhd(74) File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 74
+Info (12128): Elaborating entity "UART_Tx" for hierarchy "UART_Tx:UART_TX" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 42
+Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx:UART_RX" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 58
+Info (12128): Elaborating entity "Seven_seg" for hierarchy "Seven_seg:s0" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at seven_seg.vhd(57): signal "hex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vm/Desktop/FPGA-Servo/src/seven_seg.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at seven_seg.vhd(59): signal "hex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/vm/Desktop/FPGA-Servo/src/seven_seg.vhd Line: 59
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 9
+    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 9
 Warning (13032): The following tri-state nodes are fed by constants
-    Warning (13033): The pin "GPIO[1]" is fed by GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 9
-Info (13000): Registers with preset signals will power-up high File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/uart_rx.vhd Line: 29
+    Warning (13033): The pin "GPIO[1]" is fed by GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 9
+Info (13000): Registers with preset signals will power-up high File: C:/Users/vm/Desktop/FPGA-Servo/src/uart_rx.vhd Line: 29
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 13
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 13
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 13
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 13
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 13
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 13
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 13
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 14
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 14
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 14
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 14
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 14
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 14
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 14
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 15
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 13
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 13
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 13
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 13
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 13
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 13
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 13
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 14
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 14
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 14
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 14
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 14
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 14
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 14
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 15
 Info (286030): Timing-Driven Synthesis is running
-Warning (14632): Output pin "LEDR[0]" driven by bidirectional pin "GPIO[0]" cannot be tri-stated File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 15
+Warning (14632): Output pin "LEDR[0]" driven by bidirectional pin "GPIO[0]" cannot be tri-stated File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 15
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register UART_Rx:UART_RX|Data_Input will power up to High File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/uart_rx.vhd Line: 29
-    Critical Warning (18010): Register UART_Rx:UART_RX|Data_Input_r will power up to High File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/uart_rx.vhd Line: 27
+    Critical Warning (18010): Register UART_Rx:UART_RX|Data_Input will power up to High File: C:/Users/vm/Desktop/FPGA-Servo/src/uart_rx.vhd Line: 29
+    Critical Warning (18010): Register UART_Rx:UART_RX|Data_Input_r will power up to High File: C:/Users/vm/Desktop/FPGA-Servo/src/uart_rx.vhd Line: 27
 Info (17049): 18 registers lost all their fanouts during netlist optimizations.
 Info (128000): Starting physical synthesis optimizations for speed
 Warning (335093): The Timing Analyzer is analyzing 8 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
@@ -534,30 +513,30 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (128002): Starting physical synthesis algorithm register retiming
 Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
-Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 42 ps
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:01
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 10
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/coren/Documents/GitHub/FPGA-Servo/src/main.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 8
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/vm/Desktop/FPGA-Servo/src/main.vhd Line: 10
 Info (21057): Implemented 153 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 2 bidirectional pins
     Info (21061): Implemented 108 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
-    Info: Peak virtual memory: 4872 megabytes
-    Info: Processing ended: Sat Jun 08 23:19:48 2019
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Sat Jun 08 23:43:18 2019
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:31
 
 

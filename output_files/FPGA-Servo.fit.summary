@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sat Jun 08 23:20:03 2019
+Fitter Status : Successful - Sat Jun 08 23:43:38 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FPGA-Servo
 Top-level Entity Name : main
 Family : MAX 10
-Device : 10M50DAF484C6GES
-Timing Models : Preliminary
-Total logic elements : 109 / 49,760 ( < 1 % )
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 108 / 49,760 ( < 1 % )
     Total combinational functions : 108 / 49,760 ( < 1 % )
     Dedicated logic registers : 28 / 49,760 ( < 1 % )
 Total registers : 28
