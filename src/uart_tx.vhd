@@ -38,7 +38,7 @@ begin
   begin
     if rst = '1' then
 		state <= Idle;
-	elsif rising_edge(Clk) then
+	elsif rising_edge(clk) then
          
       CASE(state) IS
  
