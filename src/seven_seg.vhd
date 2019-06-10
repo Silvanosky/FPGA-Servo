@@ -10,48 +10,46 @@ Entity Seven_seg is
 end entity Seven_seg;
 
 architecture rtl of Seven_seg is
-
-  signal hex : std_logic_vector(1 to 7);
-
 begin
 
 process(Data, Pol)
+	variable hex : std_logic_vector(1 to 7);
 begin
   case to_integer(unsigned(Data)) is
     when 0 =>
-		hex <= "0000001";
+		hex := "0000001";
     when 1 =>
-		hex <= "1001111";
+		hex := "1001111";
     when 2 =>
-		hex <= "0010010";
+		hex := "0010010";
     when 3 =>
-		hex <= "0000110";
+		hex := "0000110";
     when 4 =>
-		hex <= "1001100";
+		hex := "1001100";
     when 5 =>
-		hex <= "0100100";
+		hex := "0100100";
     when 6 =>
-		hex <= "0100000";
+		hex := "0100000";
     when 7 =>
-		hex <= "0001111";
+		hex := "0001111";
     when 8 =>
-		hex <= "0000000";
+		hex := "0000000";
     when 9 =>
-		hex <= "0000100";
+		hex := "0000100";
     when 10 =>
-		hex <= "0001000";
+		hex := "0001000";
     when 11 =>
-		hex <= "0000000";
+		hex := "0000000";
     when 12 =>
-		hex <= "0110001";
+		hex := "0110001";
     when 13 =>
-		hex <= "0000001";
+		hex := "0000001";
     when 14 =>
-		hex <= "0110000";
+		hex := "0110000";
     when 15 =>
-		hex <= "0111000";
+		hex := "0111000";
 	  when others =>
-		hex <= "XXXXXXX";
+		hex := "XXXXXXX";
   end case;
   if pol = '1' then
     Segout <= not(hex);

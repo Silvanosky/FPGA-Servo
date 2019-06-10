@@ -2,76 +2,76 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -3.342
-TNS   : -59.038
+Type  : Slow 1200mV 85C Model Setup 'MAX10_CLK1_50'
+Slack : -4.300
+TNS   : -647.488
 
 Type  : Slow 1200mV 85C Model Setup 'UART_Rx:UART_RX|valid'
-Slack : -0.941
-TNS   : -7.148
-
-Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.348
-TNS   : 0.000
+Slack : -0.952
+TNS   : -7.092
 
 Type  : Slow 1200mV 85C Model Hold 'UART_Rx:UART_RX|valid'
-Slack : 0.382
+Slack : 0.203
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Type  : Slow 1200mV 85C Model Hold 'MAX10_CLK1_50'
+Slack : 0.330
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK1_50'
 Slack : -3.000
-TNS   : -42.284
+TNS   : -355.153
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_Rx:UART_RX|valid'
-Slack : 0.382
+Slack : 0.415
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -3.055
-TNS   : -51.907
+Type  : Slow 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -3.971
+TNS   : -572.195
 
 Type  : Slow 1200mV 0C Model Setup 'UART_Rx:UART_RX|valid'
-Slack : -0.894
-TNS   : -6.725
+Slack : -0.907
+TNS   : -6.781
 
-Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.311
+Type  : Slow 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.295
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'UART_Rx:UART_RX|valid'
-Slack : 0.459
+Slack : 0.308
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
 Slack : -3.000
-TNS   : -42.284
+TNS   : -355.153
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_Rx:UART_RX|valid'
-Slack : 0.466
+Slack : 0.474
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.916
-TNS   : -9.516
+Type  : Fast 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -1.478
+TNS   : -153.935
 
 Type  : Fast 1200mV 0C Model Setup 'UART_Rx:UART_RX|valid'
-Slack : -0.031
-TNS   : -0.189
+Slack : 0.071
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.153
+Type  : Fast 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.144
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'UART_Rx:UART_RX|valid'
-Slack : 0.333
+Slack : 0.165
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
 Slack : -3.000
-TNS   : -31.759
+TNS   : -298.117
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_Rx:UART_RX|valid'
-Slack : 0.338
+Slack : 0.336
 TNS   : 0.000
 
 ------------------------------------------------------------

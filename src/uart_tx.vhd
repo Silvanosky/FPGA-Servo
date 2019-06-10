@@ -4,16 +4,16 @@ use ieee.numeric_std.all;
  
 entity UART_Tx is
   generic (
-    freq : positive := 50E6; -- The input clock frequency
+    freq : positive := 50000000; -- The input clock frequency
     baudrate : positive := 115200 -- The baudrate to read
   );
   port (
     clk         : in  std_logic; -- The clock
 	 rst			 : in  std_logic; -- The reset signal
-	Tx_Valid	 : in  std_logic; -- Is tx sendable
+	 Tx_Valid	 : in  std_logic; -- Is tx sendable
     Tx_Byte     : in  std_logic_vector(7 downto 0); -- The Tx byte to send
     
-	Tx_Active : out std_logic;
+	 Tx_Active : out std_logic;
     Tx_Serial : out std_logic;
     Tx_Done   : out std_logic
     );
@@ -24,7 +24,7 @@ architecture rtl of UART_Tx is
   type EnumState is (Idle, Start, Data, Stop, Clear);
   signal state : EnumState := Idle;
   
-  constant clk_per_bit : positive := (freq / baudrate)-1;
+  constant clk_per_bit : integer := (freq / baudrate)-1;
   
   signal clk_Count : integer range 0 to clk_per_bit := 0;
   signal index : integer range 0 to 7 := 0;  -- 8 Bits Total
@@ -32,8 +32,6 @@ architecture rtl of UART_Tx is
   signal Done   : std_logic := '0';
    
 begin
- 
-   
   process (clk, rst)
   begin
     if rst = '1' then
@@ -88,7 +86,6 @@ begin
               state <= Stop;
             end if;
           end if;
- 
  
         -- Send out Stop bit.  Stop bit = 1
         when Stop =>

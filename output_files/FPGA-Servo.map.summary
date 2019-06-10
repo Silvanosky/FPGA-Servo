@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sat Jun 08 23:43:18 2019
+Analysis & Synthesis Status : Successful - Mon Jun 10 01:56:44 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FPGA-Servo
 Top-level Entity Name : main
 Family : MAX 10
-Total logic elements : 108
-    Total combinational functions : 106
-    Dedicated logic registers : 28
-Total registers : 28
-Total pins : 45
+Total logic elements : 533
+    Total combinational functions : 531
+    Dedicated logic registers : 251
+Total registers : 251
+Total pins : 48
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484ES) Path("C:/Users/coren/Documents/GitHub/FPGA-Servo/output_files/") File("FPGA-Servo.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/vm/Desktop/FPGA-Servo/output_files/") File("FPGA-Servo.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
