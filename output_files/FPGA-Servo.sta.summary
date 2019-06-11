@@ -3,75 +3,75 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'MAX10_CLK1_50'
-Slack : -4.300
-TNS   : -647.488
+Slack : -4.319
+TNS   : -159.432
 
 Type  : Slow 1200mV 85C Model Setup 'UART_Rx:UART_RX|valid'
-Slack : -0.952
-TNS   : -7.092
-
-Type  : Slow 1200mV 85C Model Hold 'UART_Rx:UART_RX|valid'
-Slack : 0.203
-TNS   : 0.000
+Slack : -1.072
+TNS   : -7.573
 
 Type  : Slow 1200mV 85C Model Hold 'MAX10_CLK1_50'
-Slack : 0.330
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'UART_Rx:UART_RX|valid'
+Slack : 0.355
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK1_50'
 Slack : -3.000
-TNS   : -355.153
+TNS   : -136.285
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_Rx:UART_RX|valid'
-Slack : 0.415
+Slack : 0.433
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'MAX10_CLK1_50'
-Slack : -3.971
-TNS   : -572.195
+Slack : -3.937
+TNS   : -140.076
 
 Type  : Slow 1200mV 0C Model Setup 'UART_Rx:UART_RX|valid'
-Slack : -0.907
-TNS   : -6.781
+Slack : -1.014
+TNS   : -7.159
 
 Type  : Slow 1200mV 0C Model Hold 'MAX10_CLK1_50'
-Slack : 0.295
+Slack : 0.289
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'UART_Rx:UART_RX|valid'
-Slack : 0.308
+Slack : 0.438
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
 Slack : -3.000
-TNS   : -355.153
+TNS   : -136.285
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_Rx:UART_RX|valid'
-Slack : 0.474
+Slack : 0.442
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'MAX10_CLK1_50'
-Slack : -1.478
-TNS   : -153.935
+Slack : -1.378
+TNS   : -27.765
 
 Type  : Fast 1200mV 0C Model Setup 'UART_Rx:UART_RX|valid'
-Slack : 0.071
-TNS   : 0.000
+Slack : -0.021
+TNS   : -0.021
 
 Type  : Fast 1200mV 0C Model Hold 'MAX10_CLK1_50'
-Slack : 0.144
+Slack : 0.140
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'UART_Rx:UART_RX|valid'
-Slack : 0.165
+Slack : 0.255
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
 Slack : -3.000
-TNS   : -298.117
+TNS   : -114.554
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_Rx:UART_RX|valid'
-Slack : 0.336
+Slack : 0.346
 TNS   : 0.000
 
 ------------------------------------------------------------

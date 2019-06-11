@@ -11,9 +11,9 @@ architecture TEST of tb_pwm is
    
   signal CLK       : std_logic                    := '0';
   signal RST       : std_logic                    := '1';
-  signal ena       : IN  STD_LOGIC;
-  signal duty      : IN  STD_LOGIC_VECTOR(bits_resolution-1 DOWNTO 0); --duty cycle
-  signal pwm_out   : OUT STD_LOGIC_VECTOR(phases-1 DOWNTO 0)          --pwm outputs
+  signal ena       : STD_LOGIC;
+  signal duty      : STD_LOGIC_VECTOR(7 DOWNTO 0); --duty cycle
+  signal pwm_out   : STD_LOGIC_VECTOR(0 DOWNTO 0);          --pwm outputs
   signal Done : boolean;
  
    
@@ -26,8 +26,8 @@ RST <= '1', '0' after Period;
 PWM_UUT : entity work.PWM
     generic map (
       freq => 10E6,
-	  pwm_freq => 50; -- Desired pwm frequency for servomotor
-      phases => 2 -- Use 2 output
+      pwm_freq => 50, -- Desired pwm frequency for servomotor
+      phases => 1 -- Use 2 output
       )
     port map (
       clk       	=> CLK,
@@ -38,16 +38,18 @@ PWM_UUT : entity work.PWM
       );
    
 process begin
-	wait for 199 ms;
 	ena <= '1';
 	duty <= x"FF";
-	wait for 4 ms;  -- 203
+	wait for 2000 ms;  -- 203
 	ena <= '1';
-	duty <= x"00";
-	wait for 4 ms;  -- 207
+	duty <= x"01";
+	wait for 2000 ms;  -- 207
+	ena <= '1';
+	duty <= x"0A";
+	wait for 2000 ms;  -- 207
 	ena <= '1';
 	duty <= x"80";
-	wait for 4 ms;  -- 211
+	wait for 2000 ms;  -- 211
 	ena <= '0';
 	
 	report "End of test. Verify that no error was reported.";
