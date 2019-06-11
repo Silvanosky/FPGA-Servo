@@ -62,7 +62,7 @@ begin
       IsData    => w_RX_V,
       Data_Byte => w_RX_BYTE
     );
-	 
+
   PWM : entity work.PWM
     generic map (
       freq     => 50E6,
@@ -80,20 +80,27 @@ begin
 	  r_RX_SERIAL <= GPIO(0);
 	  GPIO(1) <= w_TX_SERIAL;
 	  GPIO(4 downto 2) <= pwm_out;
-	  
+
 	  ena_pwm <= '1';
 
     s0: entity work.Seven_seg port map (Data => data(3 downto 0), Pol=>SW(9), Segout => HEX0);
     s1: entity work.Seven_seg port map (Data => data(7 downto 4), Pol=>SW(9), Segout => HEX1);
 
-    process(w_RX_V, w_TX_DONE) begin
-      if w_RX_V = '1' then
-        data <= w_RX_BYTE;
-		  duty_pwm <= w_RX_BYTE;
-		  r_TX_BYTE <= w_RX_BYTE;
-		  r_TX_V <= '1';
-		elsif w_TX_DONE = '1' then
-		  r_TX_V <= '0';
+    LEDR(0) <= SW(8);
+
+    process(w_RX_V, w_TX_DONE, SW) begin
+  		if SW(8) = '1' then
+  			data <= SW(7 downto 0);
+  			duty_pwm <= SW(7 downto 0);
+  		else
+        if w_RX_V = '1' then
+          data <= w_RX_BYTE;
+    		  duty_pwm <= w_RX_BYTE;
+    		  r_TX_BYTE <= w_RX_BYTE;
+    		  r_TX_V <= '1';
+  		  elsif w_TX_DONE = '1' then
+  		      r_TX_V <= '0';
+        end if;
       end if;
     end process;
 
